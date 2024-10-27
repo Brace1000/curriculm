@@ -16,7 +16,7 @@ func init() {
 	if err != nil {
 		log.Fatalf("failed to parse template: %v", err)
 	}
-	http.Handle("/static", http.StripPrefix("/static", http.FileServer(http.Dir("./static"))))
+	
 }
 
 // HomeHandler serves the index.html file
