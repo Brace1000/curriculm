@@ -16,8 +16,8 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fileServer))
 
 	// Start the server
-	log.Println("Server running at http://localhost:8082")
-	err := http.ListenAndServe(":8082", nil)
+	log.Println("Server running at http://localhost:8081")
+	err := http.ListenAndServe(":8081", nil)
 	if err != nil {
 		log.Fatal("Failed to start the server:", err)
 	}
