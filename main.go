@@ -12,8 +12,8 @@ func main() {
 	http.HandleFunc("/", handlers.HomeHandler)
 	
 	// // Serve static files (CSS, images)
-	fileServer := http.FileServer(http.Dir("./static"))
-	http.Handle("/static", http.StripPrefix("/static", fileServer))
+	fileServer := http.FileServer(http.Dir("./static/"))
+	http.Handle("/static/", http.StripPrefix("/static/", fileServer))
 
 	// Start the server
 	log.Println("Server running at http://localhost:8083")
